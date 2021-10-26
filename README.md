@@ -2,11 +2,17 @@
 
 ウィンドウスクロール関連のカスタムフックをお試しで実装。
 
-`src/hooks/` にコードがある。
-
 使用例は `src/components/App.tsx` を参照。
 
-改良していくかも。
+今後、追加、または改良していくかも。
+
+## フック
+
+`src/hooks/` にコードがある。
+
+- `useScrollPosition`
+- `useScrollDirection`
+- `useScrollOver`
 
 ## 実行
 
