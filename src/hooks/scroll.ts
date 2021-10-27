@@ -22,7 +22,7 @@ export const useScrollPosition = () => {
     const handler = () => {
       if (isProcessing.current) return
       isProcessing.current = true
-      requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
         isProcessing.current = false
         setPositionY(window.scrollY)
       })
