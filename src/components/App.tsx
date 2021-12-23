@@ -1,20 +1,18 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import HomePage from '~/pages/Home.page'
 import UseScrollPositionPage from '~/pages/examples/UseScrollPosition.page'
 import UseScrollDirectionPage from '~/pages/examples/UseScrollDirection.page'
 import UseScrollOverPage from '~/pages/examples/UseScrollOver.page'
 
 const App = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path='/' component={HomePage} />
-      <Route exact path='/examples/use-scroll-position' component={UseScrollPositionPage} />
-      <Route exact path='/examples/use-scroll-direction' component={UseScrollDirectionPage} />
-      <Route exact path='/examples/use-scroll-over' component={UseScrollOverPage} />
-      <Route render={() => <p>Page not found</p>} />
-    </Switch>
-  </BrowserRouter>
+  <Routes>
+    <Route path='/' element={<HomePage />} />
+    <Route path='/examples/use-scroll-position' element={<UseScrollPositionPage />} />
+    <Route path='/examples/use-scroll-direction' element={<UseScrollDirectionPage />} />
+    <Route path='/examples/use-scroll-over' element={<UseScrollOverPage />} />
+    <Route element={<p>Page not found</p>} />
+  </Routes>
 )
 
 export default App
